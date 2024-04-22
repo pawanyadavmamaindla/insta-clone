@@ -38,7 +38,7 @@ const Routing = ()=>{
       <Route path="/signup" element={<Signup />}>
         
       </Route>
-      <Route exact path="/profile" element={<Profile />}>
+      <Route  path="/profile" element={<Profile />}>
         
       </Route>
       <Route path="/create" element={<CreatePost/>}>
@@ -50,7 +50,9 @@ const Routing = ()=>{
       <Route path="/myfollowingpost" element={<SubscribedUserPosts />}>
         
       </Route>
-      <Route exact path="/reset" element={<Reset/>}>
+      <Route 
+      
+      path="/reset" element={<Reset/>}>
         
       </Route>
       <Route path="/reset/:token" element={<NewPassword />}>

@@ -8,11 +8,12 @@ const Profile  = ()=>{
     useEffect(()=>{
        fetch('/mypost',{
            headers:{
+            "Content-Type":"application/json",
                "Authorization":"Bearer "+localStorage.getItem("jwt")
            }
        }).then(res=>res.json())
        .then(result=>{
-        //    console.log(result)
+           console.log(result)
            setPics(result.mypost)
        })
     },[])
@@ -101,7 +102,7 @@ const Profile  = ()=>{
                {
                    mypics?.map(item=>{
                        return(
-                        <img key={item._id} className="item" src={item.photo} alt={item.title}/>  
+                        <img key={item?._id} className="item" src={item?.photo} alt={item?.title}/>  
                        )
                    })
                }
